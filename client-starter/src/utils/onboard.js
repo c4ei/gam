@@ -77,7 +77,7 @@ export const GetParams = async () => {
 
   response.account = currentAccount;
 
-  if (getChainID() !== 43113) {
+  if (getChainID() !== 21133) {
     response.step = 2;
 
     return response;
@@ -106,15 +106,15 @@ export async function SwitchNetwork() {
   await window?.ethereum?.request({
     method: 'wallet_addEthereumChain',
     params: [{
-      chainId: '0xA869',
-      chainName: 'Fuji C-Chain',
+      chainId: '0x528D',  // 21133
+      chainName: 'AAH Chain',
       nativeCurrency: {
-        name: 'AVAX',
-        symbol: 'AVAX',
+        name: 'AAH',
+        symbol: 'AAH',
         decimals: 18,
       },
-      rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
-      blockExplorerUrls: ['https://testnet.snowtrace.io'],
+      rpcUrls: ['https://rpc.c4ex.net'],
+      blockExplorerUrls: ['https://exp.c4ex.net'],
     }],
   }).catch((error) => {
     console.log(error);

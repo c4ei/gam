@@ -73,7 +73,7 @@ export const GetParams = async () => {
 
   response.account = currentAccount;
 
-  if (getChainID() !== 43113) {
+  if (getChainID() !== 21133) {
     response.step = 2;
     return response;
   }
